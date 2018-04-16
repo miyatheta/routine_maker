@@ -107,6 +107,7 @@ $gray-medium-light: #eaeaea;
 /* miscellaneous */
 
 .debug_dump {
+  margin-top: 20px;
   clear: both;
   float: left;
   width: 100%;
@@ -132,7 +133,7 @@ aside {
       margin-bottom: 3px;
       line-height: 1;
     }
-    h1 {
+    h3 {
       font-size: 1.4em;
       text-align: left;
       letter-spacing: -1px;

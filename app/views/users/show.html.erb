@@ -1,11 +1,21 @@
 <% provide(:title,@user.name)%>
 <div class="row">
-  <aside class="col-md-4">
-    <sectiion class="user_info">
-      <h1>
-        <%= gravatar_for @user %>
-        <%= @user.name %>
-      </h1>
-    </section>
-  </aside>
+  <div class="col-sm-2 col-md-2">
+
+            <%= gravatar_for @user %>
+
+  </div>
+  <div class="col-sm-10 col-md-10">
+    <div class="aside">
+      <section>
+        <h3>name:<%= @user.name %><br/></h3>
+        email:<%= @user.email %>
+      </section>
+    </div>
+  </div>
+</div>
+<div class="row jumbotron">
+  <h2>ここにWorkが入る</h2>
+  <h3><%= @work.detail %></h3>
+  <p><%= @work.detail %></p>
 </div>
