@@ -5,8 +5,8 @@ class CreateWorks < ActiveRecord::Migration[5.1]
       t.string :detail
       t.integer :period
       t.date :end_date
-      t.integer :User_ID
-      
+      t.integer :user_id
+
       t.timestamps
     end
   end

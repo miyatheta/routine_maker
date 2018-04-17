@@ -28,7 +28,7 @@ ActiveRecord::Schema.define(version: 20180416110648) do
     t.string "detail"
     t.integer "period"
     t.date "end_date"
-    t.integer "User_ID"
+    t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
