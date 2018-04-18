@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   get '/login' => 'session#new'
   post '/login' => 'session#create'
   delete '/logout' => 'session#destroy'
-  get 'works/index'=> 'works#index'
+  get '/index'=> 'works#index'
 
   resources :users
 

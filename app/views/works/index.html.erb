@@ -1,2 +1,12 @@
 <h1>Works#index</h1>
-<p>Find me in app/views/works/index.html.erb</p>
+
+ <div class="container">
+   <% @works.each do |work| %>
+    <div class="work-index-title">
+      <%= work.title %>
+    </div>
+    <div class="work-index-item">
+      <%= work.detail %>
+    </div>
+   <% end %>
+ </div>
