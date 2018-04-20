@@ -4,12 +4,12 @@
       <%= link_to image_tag("logo_RM_main.png", alt: "RoutineMaker"),  '/' %>
       <ul class="nav navbar-nav navbar-right">
         <li><%= link_to "Home",   '/' %></li>
-        <li><%= link_to "about",  'about' %></li>
         <% if logged_in? %>
-        <li><%= link_to "Users", "#" %></li>
-        <li><%= link_to "Profile", current_user%></li>
-        <li><%= link_to "Log out", "logout", method: :delete %></li>
+          <li><%= link_to "index", "index" %></li>
+          <li><%= link_to "Profile", current_user%></li>
+          <li><%= link_to "Log out", "logout", method: :delete %></li>
         <% else %>
+          <li><%= link_to "about",  'about' %></li>
           <li><%= link_to "Log in", 'login' %></li>
         <%end%>
       </ul>
