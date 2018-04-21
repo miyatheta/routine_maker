@@ -1,14 +1,16 @@
 Rails.application.routes.draw do
   root 'home#top'
   get '/about' => 'home#about'
-  get '/index'=> 'works#index'
-  get 'works/:id'=> 'works#show'
+  get '/works/index'=> 'works#index'
+  get '/works/new' => 'works#new'
+  get '/works/:id'=> 'works#show'
+  post '/works/create' => 'works#create'
   get '/sign_up' => 'users#new'
   post '/sign_up' => 'users#create'
   get '/login' => 'session#new'
   post '/login' => 'session#create'
   delete '/logout' => 'session#destroy'
-  get 'users/:id' => 'users#show'
+  get '/users/:id' => 'users#show'
 
 
   resources :users
