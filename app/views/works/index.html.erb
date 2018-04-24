@@ -1,9 +1,10 @@
-<h1>Works#index</h1>
+<h1>目標一覧</h1>
+<h2>習慣化に取組中</h2>
 
  <div class="container">
-   <% @works.each do |work| %>
+   <% @work.each do |work| %>
     <div class="work-index-title">
-      <%= work.title %>
+     <%= link_to(work.title,"/works/#{work.id}") %>
     </div>
     <div class="work-index-item">
       <%= work.detail %>

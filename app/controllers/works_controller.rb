@@ -1,6 +1,6 @@
 class WorksController < ApplicationController
   def index
-    @works=Work.all
+    @work=Work.all
   end
 
   def new
@@ -14,5 +14,13 @@ class WorksController < ApplicationController
 
   def show
     @work=Work.find_by(id: params[:id])
+  end
+
+  def edit
+    @work=Work.find_by(id: params[:id])
+  end
+
+  def update
+    redirect_to("works/index")
   end
 end

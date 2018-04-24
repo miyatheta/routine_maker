@@ -3,15 +3,15 @@
     <nav>
       <%= link_to image_tag("logo_RM_main.png", alt: "RoutineMaker"),  '/' %>
       <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to "ホーム",   '/' %></li>
         <% if logged_in? %>
-          <li><%= link_to "一覧", "/works/index" %></li>
-          <li><%= link_to "新規作成", "/works/new" %></li>
+          <li><%= link_to "一覧", works_index_path %></li>
+          <li><%= link_to "新規作成", works_new_path %></li>
           <li><%= link_to "プロフィール", current_user%></li>
-          <li><%= link_to "ログアウト", "logout", method: :delete %></li>
+          <li><%= link_to "ログアウト", logout_path, method: :delete %></li>
         <% else %>
-          <li><%= link_to "ルーティンメイカーとは",  'about' %></li>
-          <li><%= link_to "ログイン", 'login' %></li>
+          <li><%= link_to "ホーム",   '/' %></li>
+          <li><%= link_to "ルーティンメイカーとは", about_path %></li>
+          <li><%= link_to "ログイン", login_path %></li>
         <%end%>
       </ul>
     </nav>
