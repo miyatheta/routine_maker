@@ -1,8 +1,10 @@
-<h1>新規目標作成</h1>
-  <%= form_tag("/works/create") do%>
-    タイトル：
-    <textarea name="title"></textarea>
-    内容：
-    <textarea name="detail"></textarea>
-    <input type="submit" value="投稿" class="btn btn-primary">
-  <% end %>
+<div class="work-main">
+      <h1>新規目標作成</h1>
+    <%= form_tag("/works/create") do%>
+      <p>タイトル：</p>
+      <textarea name="title"></textarea>
+      <p>内容：</p>
+      <textarea name="detail"></textarea>
+      <input class="btn btn-lg btn-primary"　type="submit" value="投稿" >
+    <% end %>
+  </div>

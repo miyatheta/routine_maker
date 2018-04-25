@@ -1,13 +1,19 @@
+<div class="container">
+
 <h1>目標一覧</h1>
 <h2>習慣化に取組中</h2>
 
- <div class="container">
-   <% @work.each do |work| %>
-    <div class="work-index-title">
-     <%= link_to(work.title,"/works/#{work.id}") %>
+  <% @work.each do |work| %>
+    <div class="row">
+      <div class="col-md-2"></div>
+      <div class="work-main col-md-8">
+        <div class="work-index-title">
+          <%= link_to(work.title,"/works/#{work.id}") %>
+        </div>
+        <div class="work-index-item">
+          <%= work.detail %>
+        </div>
+      </div>
     </div>
-    <div class="work-index-item">
-      <%= work.detail %>
-    </div>
-   <% end %>
- </div>
+  <% end %>
+</div>
