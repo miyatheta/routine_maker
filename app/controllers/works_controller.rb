@@ -21,6 +21,16 @@ class WorksController < ApplicationController
   end
 
   def update
-    redirect_to("works/index")
+    @work=Work.find_by(id: params[:id])
+    @work.title=params[:title]
+    @work.detail=params[:detail]
+    @work.save
+    redirect_to("/works/index")
+  end
+
+  def destroy
+    @work=Work.find_by(id: params[:id])
+    @work.destroy
+    redirect_to("/works/index")
   end
 end
